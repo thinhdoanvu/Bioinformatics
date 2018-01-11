@@ -1,0 +1,5 @@
+Bài 1. Cho một chuỗi DNA bao gồm các ký tự A, C, G, hoặc T, Hỏi tần số xuất hiện các bazơ xuất hiện trong chuỗi DNA là bao nhiêu? 
+Ví dụ: input: ATGGCATTA. Tần số xuất hiện bazơ A(3), T(3), G(2), C(1).
+---------------------------------------------------------------------
+http://localhost:8888/notebooks/Count_bazo_DNA.ipynb
+---------------------------------------------------------------------
