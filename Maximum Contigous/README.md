@@ -1,6 +1,7 @@
 ![Maximum Contiguous](https://www.geeksforgeeks.org/wp-content/uploads/kadane-Algorithm.png)
 
 Kandane's algorithm
+
     Lets take the example:
     {-2, -3, 4, -1, -2, 1, 5, -3}
 
