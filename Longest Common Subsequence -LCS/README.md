@@ -1,5 +1,3 @@
-[!Image](https://www.tutorialspoint.com/design_and_analysis_of_algorithms/images/lcs.jpg)
-
 LCS Problem Statement: Given two sequences, find the length of longest subsequence present in both of them. 
 A subsequence is a sequence that appears in the same relative order, but not necessarily contiguous. 
 For example, “abc”, “abg”, “bdf”, “aeg”, ‘”acefg”, .. etc are subsequences of “abcdefg”. 
@@ -11,20 +9,53 @@ Let the input sequences be X[0..m-1] and Y[0..n-1] of lengths m and n respective
 And let L(X[0..m-1], Y[0..n-1]) be the length of LCS of the two sequences X and Y. 
 Following is the recursive definition of L(X[0..m-1], Y[0..n-1]).
 
-If last characters of both sequences match (or X[m-1] == Y[n-1]) then
-L(X[0..m-1], Y[0..n-1]) = 1 + L(X[0..m-2], Y[0..n-2])
+Naïve Method
+Let X be a sequence of length m and Y a sequence of length n. Check for every subsequence of X whether it is a subsequence of Y, and return the longest common subsequence found.
 
-If last characters of both sequences do not match (or X[m-1] != Y[n-1]) then
-L(X[0..m-1], Y[0..n-1]) = MAX ( L(X[0..m-2], Y[0..n-1]), L(X[0..m-1], Y[0..n-2])
+There are 2m subsequences of X. Testing sequences whether or not it is a subsequence of Y takes O(n) time. Thus, the naïve algorithm would take O(n2m) time.
 
-Examples:
-1) Consider the input strings “AGGTAB” and “GXTXAYB”. Last characters match for the strings. 
-So length of LCS can be written as: 
-L(“AGGTAB”, “GXTXAYB”) = 1 + L(“AGGTA”, “GXTXAY”)
+Dynamic Programming
+Let X = < x1, x2, x3,…, xm > and Y = < y1, y2, y3,…, yn > be the sequences. To compute the length of an element the following algorithm is used.
 
-2) Consider the input strings “ABCDGH” and “AEDFHR. 
-Last characters do not match for the strings. So length of LCS can be written as:
-L(“ABCDGH”, “AEDFHR”) = MAX ( L(“ABCDG”, “AEDFHR”), L(“ABCDGH”, “AEDFH”))
+In this procedure, table C[m, n] is computed in row major order and another table B[m,n] is computed to construct optimal solution.
 
-[!Youtube](https://youtu.be/HgUOWB0StNE)
+Algorithm: LCS-Length-Table-Formulation (X, Y)
+m := length(X) 
+n := length(Y) 
+for i = 1 to m do 
+   C[i, 0] := 0 
+for j = 1 to n do 
+   C[0, j] := 0 
+for i = 1 to m do 
+   for j = 1 to n do 
+      if xi = yj 
+         C[i, j] := C[i - 1, j - 1] + 1 
+         B[i, j] := ‘D’ 
+      else 
+         if C[i -1, j] ≥ C[i, j -1] 
+            C[i, j] := C[i - 1, j] + 1 
+            B[i, j] := ‘U’ 
+         else 
+         C[i, j] := C[i, j - 1] + 1 
+         B[i, j] := ‘L’ 
+return C and B
 
+Algorithm: Print-LCS (B, X, i, j)
+if i = 0 and j = 0 
+   return  
+if B[i, j] = ‘D’ 
+   Print-LCS(B, X, i-1, j-1) 
+   Print(xi) 
+else if B[i, j] = ‘U’ 
+   Print-LCS(B, X, i-1, j) 
+else 
+   Print-LCS(B, X, i, j-1) 
+   
+Example
+In this example, we have two strings X = BACDB and Y = BDCB to find the longest common subsequence.
+
+Following the algorithm LCS-Length-Table-Formulation (as stated above), we have calculated table C (shown on the left hand side) and table B (shown on the right hand side).
+
+In table B, instead of ‘D’, ‘L’ and ‘U’, we are using the diagonal arrow, left arrow and up arrow, respectively. After generating table B, the LCS is determined by function LCS-Print. The result is BCB.
+
+[!Image](https://www.tutorialspoint.com/design_and_analysis_of_algorithms/images/lcs.jpg)
