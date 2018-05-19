@@ -10,12 +10,15 @@ And let L(X[0..m-1], Y[0..n-1]) be the length of LCS of the two sequences X and 
 Following is the recursive definition of L(X[0..m-1], Y[0..n-1]).
 
 Naïve Method
-Let X be a sequence of length m and Y a sequence of length n. Check for every subsequence of X whether it is a subsequence of Y, and return the longest common subsequence found.
+Let X be a sequence of length m and Y a sequence of length n. 
+Check for every subsequence of X whether it is a subsequence of Y, and return the longest common subsequence found.
 
-There are 2m subsequences of X. Testing sequences whether or not it is a subsequence of Y takes O(n) time. Thus, the naïve algorithm would take O(n2m) time.
+There are 2m subsequences of X. Testing sequences whether or not it is a subsequence of Y takes O(n) time. 
+Thus, the naïve algorithm would take O(n2m) time.
 
 Dynamic Programming
-Let X = < x1, x2, x3,…, xm > and Y = < y1, y2, y3,…, yn > be the sequences. To compute the length of an element the following algorithm is used.
+Let X = < x1, x2, x3,…, xm > and Y = < y1, y2, y3,…, yn > be the sequences. 
+To compute the length of an element the following algorithm is used.
 
 In this procedure, table C[m, n] is computed in row major order and another table B[m,n] is computed to construct optimal solution.
 
@@ -54,8 +57,10 @@ else
 Example
 In this example, we have two strings X = BACDB and Y = BDCB to find the longest common subsequence.
 
-Following the algorithm LCS-Length-Table-Formulation (as stated above), we have calculated table C (shown on the left hand side) and table B (shown on the right hand side).
+Following the algorithm LCS-Length-Table-Formulation (as stated above), we have calculated table C (shown on the left hand side) 
+and table B (shown on the right hand side).
 
-In table B, instead of ‘D’, ‘L’ and ‘U’, we are using the diagonal arrow, left arrow and up arrow, respectively. After generating table B, the LCS is determined by function LCS-Print. The result is BCB.
+In table B, instead of ‘D’, ‘L’ and ‘U’, we are using the diagonal arrow, left arrow and up arrow, respectively. 
+After generating table B, the LCS is determined by function LCS-Print. The result is BCB.
 
 [!Image](https://www.tutorialspoint.com/design_and_analysis_of_algorithms/images/lcs.jpg)
