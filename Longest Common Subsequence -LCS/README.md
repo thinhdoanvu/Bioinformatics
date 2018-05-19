@@ -1,3 +1,5 @@
+[!Imag](https://www.tutorialspoint.com/design_and_analysis_of_algorithms/images/lcs.jpg)
+
 LCS Problem Statement: Given two sequences, find the length of longest subsequence present in both of them. 
 A subsequence is a sequence that appears in the same relative order, but not necessarily contiguous. 
 For example, “abc”, “abg”, “bdf”, “aeg”, ‘”acefg”, .. etc are subsequences of “abcdefg”. 
@@ -24,5 +26,5 @@ L(“AGGTAB”, “GXTXAYB”) = 1 + L(“AGGTA”, “GXTXAY”)
 Last characters do not match for the strings. So length of LCS can be written as:
 L(“ABCDGH”, “AEDFHR”) = MAX ( L(“ABCDG”, “AEDFHR”), L(“ABCDGH”, “AEDFH”))
 
-[!Imag](https://www.tutorialspoint.com/design_and_analysis_of_algorithms/images/lcs.jpg)
+[!Youtube](https://youtu.be/HgUOWB0StNE)
 
