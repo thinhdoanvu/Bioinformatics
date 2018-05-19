@@ -22,6 +22,7 @@ L(“AGGTAB”, “GXTXAYB”) = 1 + L(“AGGTA”, “GXTXAY”)
 
 2) Consider the input strings “ABCDGH” and “AEDFHR. 
 Last characters do not match for the strings. So length of LCS can be written as:
-L(“ABCDGH”, “AEDFHR”) = MAX ( L(“ABCDG”, “AEDFHR”), L(“ABCDGH”, “AEDFH”) )
+L(“ABCDGH”, “AEDFHR”) = MAX ( L(“ABCDG”, “AEDFHR”), L(“ABCDGH”, “AEDFH”))
 
+[!Hinh anh minh hoa](https://www.tutorialspoint.com/design_and_analysis_of_algorithms/images/lcs.jpg)
 [!Youtube](https://youtu.be/HgUOWB0StNE)
