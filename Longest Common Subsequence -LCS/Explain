@@ -64,3 +64,41 @@ In table B, instead of ‘D’, ‘L’ and ‘U’, we are using the diagonal a
 After generating table B, the LCS is determined by function LCS-Print. The result is BCB.
 
 [!Image](https://www.tutorialspoint.com/design_and_analysis_of_algorithms/images/lcs.jpg)
+
+=================================================================================================================================
+DEMO
+=================================================================================================================================
+Nhap du lieu cho chuoi X:
+CAGATAGAG
+
+Nhap du lieu cho chuoi Y:
+AGCGA
+
+Chuoi CAGATAGAG co do dai = 9
+Chuoi AGCGA co do dai = 5
+Ma tran trong so:
+000000
+000111
+011112
+012222
+012223
+012223
+012223
+012233
+012234
+012234
+
+Ma tran luu vet:
+000000
+011011
+001110
+020101
+002110
+022112
+002110
+020101
+002120
+020102
+
+Chuoi chung co do dai lon nhat la: 4
+Chuoi tim duoc la: AGGA
