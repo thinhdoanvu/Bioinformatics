@@ -1,0 +1,55 @@
+Bước 1. Khởi tạo 3 Node ban đầu và gán giá trị cho Nodes
+  //cap phat vung nho cho cac Node
+  head = (struct Node*) malloc (sizeof (struct Node));
+  second = (struct Node*) malloc (sizeof (struct Node));
+  third = (struct Node*) malloc (sizeof (struct Node));
+
+  //khai bao gia tri cho Node
+  printf("Gia tri cua Node head = ");
+  fflush(stdin);
+  scanf("%d",&head->data);
+  head->next=second;
+
+  printf("Gia tri cua Node second = ");
+  fflush(stdin);
+  scanf("%d",&second->data);
+  second->next=third;
+
+  printf("Gia tri cua Node third = ");
+  fflush(stdin);
+  scanf("%d",&third->data);
+  third->next=NULL;
+  
+Bước 2. Khởi tạo Node cần chèn, nhập giá trị cho Node mới
+  struct Node* newfirstNode;
+  int newfirstdata;
+
+  //Buoc 1.khai bao vung nho cho Node can chen
+  newfirstNode = (struct Node*) malloc (sizeof(struct Node));
+  
+  //Buoc 2. Nhap du lieu (data) cho Node
+  printf("\nNhap gia tri can chen: ");
+  fflush(stdin);
+  scanf("%d",&newfirstdata);
+  newfirstNode->data=newfirstdata;
+  
+Bước 3. Gán phần next của Node mới vào phần head
+ //Buoc 3. Phan next cua newfirstnode gan vao dau danh sach
+ newfirstNode->next=head;
+ 
+Bước 4. Gán Node head thành Node mới
+ //Buoc 4. Chuyen phan head tro sang newfirstNode
+  head=newfirstNode;
+
+[!Hinh Minh Hoa](https://www.geeksforgeeks.org/wp-content/uploads/gq/2013/03/Linkedlist_insert_at_start.png)
+
+==================================================================================================================================
+DEMO
+==================================================================================================================================
+Gia tri cua Node head = 10
+Gia tri cua Node second = 20
+Gia tri cua Node third = 30
+   10   20   30
+Danh sach sau khi chen 1 node vao dau:
+Nhap gia tri can chen: 5
+    5   10   20   30
