@@ -1,0 +1,72 @@
+Viết 1 chương trình nhập vào các Node và tiến hành:
+1/ Thêm vào các Node cho đến khi thoát
+2/ Nhập vào giá trị của 1 NODE cần xóa và tiến hành xóa NODE đó ra khỏi danh sách
+=================================================================================================================
+DEMO
+=================================================================================================================
+Gia tri cua head node = 3
+Bam Enter de tiep tuc, N de thoat:
+Gia tri cua Node moi = 1
+Bam Enter de tiep tuc, N de thoat:
+Gia tri cua Node moi = 2
+Bam Enter de tiep tuc, N de thoat:
+Gia tri cua Node moi = 4
+Bam Enter de tiep tuc, N de thoat:
+Gia tri cua Node moi = 0
+Bam Enter de tiep tuc, N de thoat: n
+
+Danh sach sau khi them Node la:     0    4    2    1    3
+Nhap gia tri can xoa: 2
+Node can xoa nam o giua danh sach
+Danh sach sau khi xoa 1 Node la:     0    4    1    3
+
+****************************************************************************************************************
+Gia tri cua head node = 3
+Bam Enter de tiep tuc, N de thoat:
+Gia tri cua Node moi = 2
+Bam Enter de tiep tuc, N de thoat:
+Gia tri cua Node moi = 1
+Bam Enter de tiep tuc, N de thoat:
+Gia tri cua Node moi = 0
+Bam Enter de tiep tuc, N de thoat: n
+
+Danh sach sau khi them Node la:     0    1    2    3
+Nhap gia tri can xoa: 0
+
+Node can xoa nam o dau danh sach, xem bai DeleteFirst.c
+Danh sach sau khi xoa 1 Node la:     1    2    3
+
+****************************************************************************************************************
+Gia tri cua head node = 6
+Bam Enter de tiep tuc, N de thoat:
+Gia tri cua Node moi = 2
+Bam Enter de tiep tuc, N de thoat:
+Gia tri cua Node moi = 0
+Bam Enter de tiep tuc, N de thoat:
+Gia tri cua Node moi = 4
+Bam Enter de tiep tuc, N de thoat: n
+
+Danh sach sau khi them Node la:     6    2    0    4
+Nhap gia tri can xoa: 4
+
+Node can xoa nam o cuoi danh sach
+Danh sach sau khi xoa 1 Node la:     6    2    0
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+GIẢI THUẬT
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Nếu NODE nằm ở đầu danh sách
+Tạo ra 1 NODE tạm (deleteNode) sau đó gán Node này = head->next (node kết tiếp)
+1. deleteNode = head->next //Node kế tiếp
+2. Gán head = deleteNode
+3. Giải phóng vùng nhớ của deleteNode
+
+Nếu NODE nằm ở cuối danh sách
+Tạo ra 1 prevNode để lưu giữ NODE trước đó
+1. Trỏ prevNode ==NULL để kết thúc danh sách
+2. Giải phóng vùng nhớ cho deleteNode
+
+Nếu NODE nằm giữa danh sách
+1. Tạo ra 2 NODE (prevNode và forwNode) để lưu giữ 2 Node trước và sau
+2. Trỏ prevNode->next đến forwdNode
+3. Giải phóng vùng nhớ của deleteNode
