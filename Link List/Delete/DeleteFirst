@@ -1,0 +1,35 @@
+1/ Xây dựng 1 chương trình nhập vào lần lượt các Node cho đến khi bấm phím thoát để dừng.
+2/ Hiển thị danh sách các Node đã nhập.
+3/ Nhập giá trị cần xóa nằm ở đầu danh sách và tiến hành xóa giá trị (HEAD NODE) ra khỏi danh sách
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Giải thuật:
+1/ Khởi tạo 1 Node tạm (deleteNode)
+2/ Gán Node tạm (deleteNode) = HEAD->next. Có nghĩa là deleteNode sẽ được trỏ đến Node First và có giá trị bằng HEAD->data
+3/ Gán head = deleteNode
+
+=========================================================================================================================
+DEMO
+=========================================================================================================================
+Nhap gia tri cho Node head= 5
+Ban co muon them Node? N de thoat, Enter de tiep tuc:
+
+Nhap gia tri cua node moi = 1
+Ban co muon them Node? N de thoat, Enter de tiep tuc:
+
+Nhap gia tri cua node moi = 3
+Ban co muon them Node? N de thoat, Enter de tiep tuc:
+
+Nhap gia tri cua node moi = 2
+Ban co muon them Node? N de thoat, Enter de tiep tuc:
+
+Nhap gia tri cua node moi = 0
+Ban co muon them Node? N de thoat, Enter de tiep tuc:
+
+Nhap gia tri cua node moi = 6
+Ban co muon them Node? N de thoat, Enter de tiep tuc: n
+
+Danh sach sau khi them Node la:     6    0    2    3    1    5
+Nhap gia tri can xoa: 6
+
+Node can xoa nam o dau danh sach
+    0    2    3    1    5
