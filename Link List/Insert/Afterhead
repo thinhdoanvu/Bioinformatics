@@ -1,0 +1,16 @@
+The steps for inserting a node after node ‘head’
+1. Make a new node
+2. Point the ‘next’ of the new node to the node ‘second’ (the node after which we have to insert the new node).
+3.Point the 'next' of head node to the newnode
+================================================================================================================
+DEMO
+================================================================================================================
+Nhap gia tri cho Node head: 1
+
+Nhap gia tri cho Node second: 3
+
+Nhap gia tri cho Node third: 4
+
+Danh sach sau khi khoi tao la:     1    3    4
+Nhap gia tri cho node can chen: 2
+    1    2    3    4
