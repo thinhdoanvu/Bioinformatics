@@ -1,0 +1,26 @@
+Viết chương trình nhập vào một danh sách cho đến khi kết thúc
+1. In ra danh sách vừa nhập
+2. In ra độ dài của danh sách
+3. Nhập vào 1 giá trị K và hỏi K có tồn tại trong danh sách hay không
+
+===============================================================================================================
+DEMO
+===============================================================================================================
+Nhap gia tri cho head node: 3
+Enter de tiep tuc, N de thoat:
+Gia tri can them: 1
+Enter de tiep tuc, N de thoat:
+Gia tri can them: 6
+Enter de tiep tuc, N de thoat:
+Gia tri can them: 0
+Enter de tiep tuc, N de thoat:
+Gia tri can them: 2
+Enter de tiep tuc, N de thoat:
+Gia tri can them: 9
+Enter de tiep tuc, N de thoat: n
+
+Danh sach sau khi chen la:     9    2    0    6    1    3
+Danh sach co do dai = 6
+
+Nhap gia tri can tim: 0
+Tim thay 0 tai vi tri 2 cua danh sach!
