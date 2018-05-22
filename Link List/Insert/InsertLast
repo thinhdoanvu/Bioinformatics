@@ -1,0 +1,11 @@
+
+Gia tri cua Node head = 1
+
+Gia tri cua Node second = 3
+
+Gia tri cua Node third = 2
+
+Danh sach vua nhap la:    1    3    2
+Nhap gia tri cua Node can chen: 4
+
+Danh sach sau khi chen vao cuoi la:     1    3    2    4
