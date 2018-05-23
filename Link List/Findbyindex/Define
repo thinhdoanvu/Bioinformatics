@@ -1,0 +1,24 @@
+1. Nhập vào 1 danh sách liên kết, cho đến khi thoát
+2. In danh sách đã nhập ra màn hình
+3. Nhập vào chỉ số (index) của node cần tìm kiếm
+4. Hiển thị node tại vị trí index ra màn hình
+====================================================================================================
+DEMO
+====================================================================================================
+Nhap gia tri cho head node = 1
+Bam Enter de tiep tuc, n/N de thoat:
+gia tri cua node = 3
+Bam Enter de tiep tuc, n/N de thoat:
+gia tri cua node = 5
+Bam Enter de tiep tuc, n/N de thoat:
+gia tri cua node = 7
+Bam Enter de tiep tuc, n/N de thoat:
+gia tri cua node = 9
+Bam Enter de tiep tuc, n/N de thoat: 0
+gia tri cua node = 0
+Bam Enter de tiep tuc, n/N de thoat: n
+
+Danh sach Node sau khi khoi tao la:    0    9    7    5    3    1
+
+Nhap node can tim kiem theo chi so: 4
+Node thu 4 can tim kiem la: 3
