@@ -1,0 +1,9 @@
+1. Viết chương trình thực hiện tạo ra 1 danh sách liên kết và hiển thị danh sách đó ra màn hình
+2. Thực hiện đổi cho 2 phần tử có giá trị lần lượt là X và Y (X,Y được nhập từ bàn phím)
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Giải thuật:
+Đổi chỗ 2 phần tử bằng cách gán giá trị của Node có giá trị là X cho biến tạm
+Sau đó gán biến tạm cho Node chó gia trị là Y
+=================================================================================================
+DEMOO
+=================================================================================================
