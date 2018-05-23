@@ -7,3 +7,21 @@ Sau đó gán biến tạm cho Node chó gia trị là Y
 =================================================================================================
 DEMOO
 =================================================================================================
+Nhap gia tri cho node head = 3
+bam Enter de tiep tuc, n/N de thoat:
+nhap gia tri cua Node = 1
+bam Enter de tiep tuc, n/N de thoat:
+nhap gia tri cua Node = 0
+bam Enter de tiep tuc, n/N de thoat:
+nhap gia tri cua Node = 9
+bam Enter de tiep tuc, n/N de thoat:  6
+nhap gia tri cua Node =
+6
+bam Enter de tiep tuc, n/N de thoat:  n
+
+Danh sach sau khi khoi tao la:    6    9    0    1    3
+Nhap gia tri cua Node search: X= 9
+
+Nhap gia tri cua Node replace: Y= 1
+Danh sach sau khi hoan vi 2 gia tri 9 va 1 la:
+    6    1    0    9    3
