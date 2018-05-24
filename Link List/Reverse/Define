@@ -1,0 +1,44 @@
+[Algorithm by Picture](https://algorithms.tutorialhorizon.com/files/2014/08/Linked-List-Reversal-846x1024.png)
+1. Create 3 nodes, currNode, PrevNode and nextNode.
+2. Initialize them as currNode = head; nextNode = null;prevNode = null;
+3. Now keep reversing the pointers one by one till currNode!=null.
+Step 1-3. Here:
+while(currNode!=null){
+     nextNode = currNode.next;
+     currNode.next = prevNode;
+     prevNode = currNode;
+     currNode = nextNode;
+}
+
+4. At the end set head = prevNode;
+
+=================================================================================================================
+DEMO
+=================================================================================================================
+Nhap gia tri cho node head: 1
+
+Bam Enter de tiep tuc, (n/N) de thoat:
+Gia tri cua Node = 2
+
+Bam Enter de tiep tuc, (n/N) de thoat:
+Gia tri cua Node = 3
+
+Bam Enter de tiep tuc, (n/N) de thoat:
+Gia tri cua Node = 4
+
+Bam Enter de tiep tuc, (n/N) de thoat:
+Gia tri cua Node = 5
+
+Bam Enter de tiep tuc, (n/N) de thoat:
+Gia tri cua Node = 6
+
+Bam Enter de tiep tuc, (n/N) de thoat:
+Gia tri cua Node = 7
+
+Bam Enter de tiep tuc, (n/N) de thoat:
+Gia tri cua Node = 8
+
+Bam Enter de tiep tuc, (n/N) de thoat: n
+
+Danh sach sau khi khoi tao la:     8    7    6    5    4    3    2    1
+Danh sach sau khi dao nguoc la:     1    2    3    4    5    6    7    8
