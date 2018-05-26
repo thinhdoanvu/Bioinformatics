@@ -1,0 +1,36 @@
+Nhap gia tri cua node head = 1
+Enter de nhap, (n/N) de thoat:
+Gia tri cua node = 2
+Enter de nhap, (n/N) de thoat:
+Gia tri cua node = 1
+Enter de nhap, (n/N) de thoat:
+Gia tri cua node = 3
+Enter de nhap, (n/N) de thoat:
+Gia tri cua node = 4
+Enter de nhap, (n/N) de thoat: n
+
+Danh sach sau khi nhap la:    1    2    1    3    4
+Danh sach sau khi xoa cac node trung lap:     1    2    3    4
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+  tam=head;
+  prev=head;
+  while(tam->next!=NULL) //duyet den node gan cuoi
+  {
+  	next=tam->next;
+  	while(next!=NULL)//duyet den node cuoi cung
+  	{
+  	  if(tam->data == next->data)//xoa node
+  	  {
+  	  	prev->next=next->next;//tro sang node ke tiep (bo qua 1 node)
+  	  	next=next->next;//tro qua node ke tiep
+	  }
+	  else
+	  {
+	  	prev=next;
+	    next=next->next;//tro qua node ke tiep
+      }
+	}
+	
+	//tro qua node thu 2, 3, 4...
+	tam=tam->next;
+  }
