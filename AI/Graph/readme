@@ -1,0 +1,4 @@
+A graph is a set of nodes or known number of vertices. When these vertices are paired together, we call it edges. An Edge is a line from one node to other. Every edge can have its cost or weight.
+Graphs are two types Directed and Undirected. Directed graphs are the graphs in which the vertices are ordered and in undirected graphs the vertices are unordered.
+
+An Adjacency matrix is a finite set of values used to create an easy way to look for an edge. If the value at 0th row and 1st column are zero, it means the edge does not exist.
