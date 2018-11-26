@@ -10,3 +10,101 @@ An Adjacency matrix is a finite set of values used to create an easy way to look
 In the example above, the program is made to create an adjacency matrix for either of Directed or Undirected type of graph.
 The Program will ask for the number of nodes then the directed or undirected graph. After that it will ask for the values of the node. In the end, it will print the matrix.
 The Adjacency matrix is the 2-D array of integers.
+
+Coding:
+
+//khai bao thu vien
+#include <stdio.h>
+#include <stdlib.h>
+
+//khai bao bien
+int matranke[20][20]; //toi da do thi co 20 dinh
+int V; //so dinh
+int V_max;//so dinh toi da
+char ans;
+
+//chuong trinh nhap so dinh
+void khoitao()
+{
+  printf("Nhap so dinh cua do thi = ");
+  scanf("%d",&V);
+  //kiem tra dieu kien
+  while(V<=0 || V>20)
+  {
+    printf("\nSo dinh khong hop le\n");
+    printf("Nhap so dinh cua do thi = ");
+    scanf("%d",&V);
+  }
+
+  printf("Dinh dang do thi vo huong (u) hay co huong (d): ");
+  fflush(stdin);
+  scanf("%c",&ans);
+  if(ans=='u' || ans == 'U')
+  {
+    V_max=V*(V-1)/2;
+  }
+  else
+  {
+    V_max=V*(V-1);
+  }
+}
+
+//nhap danh sach ma tran ke
+void nhap_danhsach()
+{
+  //khai bao bien
+  int i;
+  int bd;
+  int kt;
+
+  printf("\nNhap thong tin cho cac canh (0 0 de ket thuc)\n");
+  printf("Cap so (a b): co nghia la di tu dinh a den b\n");
+  printf("Vi du: canh thu 1: 2 3 <=> noi tu dinh 2 den dinh 3\n");
+  for(i=1;i<=V_max;i++)
+  {
+    printf("Canh thu %d = ",i);
+    scanf("%d %d",&bd,&kt);
+    if(bd==0 && kt==0)
+    {
+      break;
+    }
+    if(bd>V || kt>V || bd<=0 || kt <=0)
+    {
+      printf("\nThong tin canh khong hop le\n");
+      i--;
+    }
+    else
+    {
+      matranke[bd][kt]=1;
+     if(ans=='u')
+     {
+       matranke[kt][bd]=1;
+     }
+    }
+  }
+  
+}
+
+void in_danhsach()
+{
+  //khai bao bien
+  int i;
+  int j;
+
+  for(i=1;i<=V_max;i++)
+  {
+    for(j=1;j<=V_max;j++)
+    {
+      printf("%5d",matranke[i][j]);
+    }
+    printf("\n");
+  }
+
+}
+//chuong trinh chinh
+int main()
+{
+  khoitao();
+  nhap_danhsach();
+  in_danhsach();
+}
