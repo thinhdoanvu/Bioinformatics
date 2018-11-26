@@ -13,6 +13,18 @@ BFS (G, s)                   //Where G is the graph and s is the source node
                         Q.enqueue( w )             //Stores w in Q to further visit its neighbour
                         mark w as visited.
 
+Queue:
+        front
+          |
+          v
+        ----------------------
+-->       |  |  |  |  |  |  |  ---> 
+insert    |  |  |  |  |  |  |  delete
+        ----------------------
+                            ^
+                            |
+                           rear
+                                       
 Example
    S
   / \
