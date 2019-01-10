@@ -7,7 +7,7 @@ OUTPUT STRING: ABD
 
 Using Longest Common String (LCS) algorithm for itshelf, and modify like this:
 If(X[i]==Y[j] and i!=j then C[i,j]=C[i-1,j-1]+1)//left conner above
-If(X[i]==Y[j] and i==j then C[i,j]=C[i-1,j-1]) <-> Lefthand side
+If(X[i]==Y[j] and i==j then C[i,j]=C[i,j-1]) <-> Lefthand side
 If(X[i]!=Y[j] and C[i-1,j]>=C[i,j-1] then C[i,j]=C[i-1,j-1]) <-> Up
 If(X[i]<>Y[j] and C[i-1,j]<C[i,j-1] then C[i,j]=C[i,j-1]) <-> Left
 ==============================================================================================================================
